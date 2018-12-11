@@ -1,0 +1,124 @@
+/* On va suivre la méthode BEM => ciblage sur class uniquement
+=> http://getbem.com/introduction/
+*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.row {
+  overflow: auto;
+}
+
+.selection-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 50px auto 40px auto;
+  font-size: 13px;
+  color: #777;
+  width: 507px;
+  padding-top: 30px;
+  background-image: url(../images/deco.png);
+  background-repeat: repeat-x; /* l'image se répère sur l'axe horizontal uniquement */
+}
+
+.selection-title__style {
+  display: block;
+  font-size: 1.8em;
+  margin-top: 10px;
+  letter-spacing: 8px;
+  color: black;
+}
+
+.products {
+  border: 1px solid #aaa;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.product {
+  float: left;
+  position: relative;
+  width: calc(100% / 3 - 20px); /* force à avoir toujours 3 produits par ligne | -20px à cause du margin:10px */
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 8px;
+  /* border: 1px solid white; */
+  margin: 10px;
+}
+
+.product:hover {
+  /* border-color: grey; */
+  box-shadow: 0 0 20px darkgrey;
+}
+
+.product__image {
+  max-width: 100%; /* force l'image à ne jamais dépassé du cadre de son container */
+}
+
+.product__name {
+  text-transform: uppercase;
+  color: #5d5d5d;
+}
+
+.product__brand {
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #eb1225;
+  color: white;
+  padding: 5px 10px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.product__price {
+  font-weight: bold;
+}
+
+.product__price--old {
+  text-decoration: line-through;
+}
+
+.product__sales {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  border: 4px solid #bbb;
+  color: white;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.footer {
+  text-align: center;
+  color: darkgreen;
+}
+
+.fixed-sales {
+  position: fixed;
+  left: 0;
+  top: calc(50% - 102px / 2);
+  background-color: #eb1225;
+  color: white;
+  width: 20px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  word-break: break-all;
+  padding: 15px 5px;
+  text-align: center;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.fixed-sales:hover {
+  background-color: #bc0e1d;
+}
